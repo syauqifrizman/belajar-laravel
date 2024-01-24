@@ -3,14 +3,14 @@
 @section('content')
     <div class="bg-body-secondary">
         <h2>
-            {{ $post["title"] }}
+            {{ $post->title }}
         </h2>
         <h5>
-            Author: {{ $post["author"] }}
+            Author: {{ $post->author }}
         </h5>
-        <p>
-            {{ $post["body"] }}
-        </p>
+        <div>
+            {{ $post->body }}
+        </div>
     </div>
 
     <div>
