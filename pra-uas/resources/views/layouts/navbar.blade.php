@@ -12,5 +12,8 @@
         <div class="mx-2">
             <a href="/blog">Blog</a>
         </div>
+        <div class="mx-2">
+            <a href="/categories">Categories</a>
+        </div>
     </div>
 </nav>

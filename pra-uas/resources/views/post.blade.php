@@ -6,7 +6,8 @@
             {{ $post->title }}
         </h2>
         <h5>
-            Author: {{ $post->author }}
+            Author: {{ $post->author }} in
+            <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
         </h5>
         <div>
             {{ $post->body }}
