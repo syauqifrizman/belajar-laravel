@@ -7,13 +7,19 @@
             <a href="/">Home</a>
         </div>
         <div class="mx-2">
-            <a href="/authors">Authors</a>
+            <a href="{{ route('listAuthorPage') }}">Authors</a>
         </div>
         <div class="mx-2">
-            <a href="/blog">Blog</a>
+            <a href="{{ route('blogPage') }}">Blog</a>
         </div>
         <div class="mx-2">
-            <a href="/categories">Categories</a>
+            <a href="{{ route('listCategoryPage') }}">Categories</a>
+        </div>
+
+        <div>
+            <button class="btn-primary">
+                <a href="{{ route('loginPage') }}">Login</a>
+            </button>
         </div>
     </div>
 </nav>

@@ -2,15 +2,15 @@
 
 @section('content')
     <div>
-        <h2>Info User:</h2>
-        <p>{{ $user->name }}</p>
-        <p>{{ $user->email }}</p>
+        <h2>Info Author:</h2>
+        <p>{{ $author->name }}</p>
+        <p>{{ $author->email }}</p>
         <img src="img/{{ $image }}" alt="{{ $image }}" width="200">
     </div>
 
     <div>
         <h2 class="mt-2">Info Article/Post</h2>
-        @foreach ($user->post as $post)
+        @foreach ($author->post as $post)
             <div>
                 <ul>
                     <li>

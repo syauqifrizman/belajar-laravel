@@ -23,15 +23,20 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/authors', [UserController::class, 'getAllUser']);
+Route::get('/authors', [UserController::class, 'getAllUser'])->name('listAuthorPage');
 
-Route::get('/about/{user:username}', [UserController::class, 'getUserData']);
+Route::get('/about/{author:username}', [UserController::class, 'getUserData']);
 
-Route::get('/blog', [PostController::class, 'index']);
+Route::get('/blog', [PostController::class, 'index'])->name('blogPage');
 
 // halaman single posts
-Route::get('blog/{post:slug}', [PostController::class, 'getPost']);
+Route::get('/blog/{post:slug}', [PostController::class, 'getPost']);
 
-Route::get('categories/{category:slug}', [CategoryController::class, 'getAllPostCategory']);
+Route::get('/categories/{category:slug}', [CategoryController::class, 'getAllPostCategory']);
 
-Route::get('/categories', [CategoryController::class, 'getAllCategory']);
+Route::get('/categories', [CategoryController::class, 'getAllCategory'])->name('listCategoryPage');
+
+Route::get('/login', [UserController::class, 'loginPage'])->name('loginPage');
+
+Route::get('/register', [UserController::class, 'registerPage'])->name('registerPage');
+Route::post('/register', [UserController::class, 'storeAccount'])->name('createAccount');
