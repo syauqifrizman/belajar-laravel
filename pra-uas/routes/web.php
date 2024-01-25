@@ -37,6 +37,9 @@ Route::get('/categories/{category:slug}', [CategoryController::class, 'getAllPos
 Route::get('/categories', [CategoryController::class, 'getAllCategory'])->name('listCategoryPage');
 
 Route::get('/login', [UserController::class, 'loginPage'])->name('loginPage');
+Route::post('/login', [UserController::class, 'loginAccount'])->name('loginAccount');
 
 Route::get('/register', [UserController::class, 'registerPage'])->name('registerPage');
 Route::post('/register', [UserController::class, 'storeAccount'])->name('createAccount');
+
+Route::get('/dashboard', [UserController::class, 'dashboardPage'])->name('dashboardPage');

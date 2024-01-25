@@ -17,19 +17,19 @@ class UserSeeder extends Seeder
             [
                 'name' => 'Syauqi Frizman',
                 'username' => 'syauqifrizman',
-                'email' => 'syauqi@gmai.com',
+                'email' => 'syauqi@gmail.com',
                 'password' => bcrypt('syauqi'),
             ],
             [
                 'name' => 'Uqisya',
                 'username' => 'uqisya',
-                'email' => 'uqisya@gmai.com',
+                'email' => 'uqisya@gmail.com',
                 'password' => bcrypt('uqisya'),
             ],
             [
                 'name' => 'Mutia Sari Dewi',
                 'username' => 'mutiasaridewi',
-                'email' => 'mutia@gmai.com',
+                'email' => 'mutia@gmail.com',
                 'password' => bcrypt('mutia'),
             ],
         ];

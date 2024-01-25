@@ -7,16 +7,29 @@
                 <h3 class="bg-success text-light">{{ session('success') }}</h3>
             </div>
         @endif
+        @if (session()->has('fail'))
+            <div>
+                <h3 class="bg-danger text-light">{{ session('fail') }}</h3>
+            </div>
+        @endif
         <h1>Login Account</h1>
-        <form action="" method="POST">
+        <form action="{{ route('loginAccount') }}" method="POST">
             @csrf
             <div>
                 <label for="email">Email: </label>
-                <input type="email" name="email" id="email">
+                <input type="email" name="email" id="email" class="@error('email') border-danger @enderror" value="{{ old('email') }}">
+
+                @error('email')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
             </div>
             <div>
                 <label for="password">Pasword: </label>
-                <input type="password" name="password" id="password">
+                <input type="password" name="password" id="password" class="@error('password') border-danger @enderror" value="{{ old('password') }}">
+
+                @error('password')
+                    <p class="text-danger">{{ $message }}</p>
+                @enderror
             </div>
             <button class="btn-primary" type="submit">Login</button>
         </form>
