@@ -6,7 +6,7 @@
             {{ $post->title }}
         </h2>
         <h5>
-            Author: {{ $post->author }} in
+            Author: <a class="text-decoration-none" href="/about/{{ $post->user->username }}">{{ $post->user->name }}</a> in
             <a href="/categories/{{ $post->category->slug }}">{{ $post->category->name }}</a>
         </h5>
         <div>

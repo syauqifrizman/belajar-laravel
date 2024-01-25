@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -22,14 +23,9 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/about', function(){
-   return view('about', [
-    "title" => "About",
-    "name" => "Syauqi Frizman",
-    "email" => "syauqi@gmail.com",
-    "image" => "syauqi.jpg"
-   ]);
-});
+Route::get('/authors', [UserController::class, 'getAllUser']);
+
+Route::get('/about/{user:username}', [UserController::class, 'getUserData']);
 
 Route::get('/blog', [PostController::class, 'index']);
 

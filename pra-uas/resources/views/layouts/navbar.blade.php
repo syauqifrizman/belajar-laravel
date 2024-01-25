@@ -7,7 +7,7 @@
             <a href="/">Home</a>
         </div>
         <div class="mx-2">
-            <a href="/about">About</a>
+            <a href="/authors">Authors</a>
         </div>
         <div class="mx-2">
             <a href="/blog">Blog</a>
