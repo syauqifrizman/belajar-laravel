@@ -24,7 +24,7 @@
                 @enderror
             </div>
             <div>
-                <label for="password">Pasword: </label>
+                <label for="password">Password: </label>
                 <input type="password" name="password" id="password" class="@error('password') border-danger @enderror" value="{{ old('password') }}">
 
                 @error('password')

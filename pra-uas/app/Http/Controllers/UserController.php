@@ -71,15 +71,24 @@ class UserController extends Controller
         // attempt login
         if(Auth::attempt($credential)){
             $request->session()->regenerate();
-            return redirect()->intended(route('dashboardPage'));
+            return redirect()->intended(route('getMyPost'));
         }
 
         return back()->with('fail', 'Login Failed');
     }
 
-    public function dashboardPage(){
-        return view('dashboard.index', [
-            'title' => 'Dashboard'
-        ]);
+    public function logoutAccount(Request $request){
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect()->route('loginPage')->with('success', 'Success logout');
     }
+
+//     public function dashboardPage(){
+//         return view('dashboard.index', [
+//             'title' => 'Dashboard'
+//         ]);
+//     }
 }
